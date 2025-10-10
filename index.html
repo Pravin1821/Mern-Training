@@ -30,5 +30,14 @@
       <a href="page1.html" class="btn">Go to Page 1</a><br>
       <h3>Landing Page</h3>
       <a href="Landingpage.html" class="btn">Go to Landing Page</a>
+      <h3 id="click">Click the button to see magic!</h3>
+      <button onclick="changetext()">Button</button>
+      <script>
+        function changetext(){
+            document.getElementById("click").innerHTML="You are foolish to click the button!";
+        }
+      </script>
+      <h3>To play game!</h3>
+      <a href="Game.html" class="btn">Go to Game</a>
 </body>
 </html>
