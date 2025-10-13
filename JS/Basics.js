@@ -41,3 +41,43 @@ const multiply=(x,y)=>{
 multiply(5,3);
 const addArrow=(x,y)=> x+y;
 console.log("Arrow Function Add: " + addArrow(5,3));
+//Map Reduce
+const numbers = [1, 2, 3, 4, 5];
+function square(num)
+{
+    return num*num;
+}
+const squaredNumbers = numbers.map(square);
+console.log("Squared Numbers using Map: " + squaredNumbers);
+const addnumers = numbers.map(num => num+10);
+console.log("Add 10 to each element using Map: " + addnumers);
+//Map Filter
+const isOdd = (num) => (num % 2 != 0 )
+console.log("Odd or Even using Map: " + numbers.filter(isOdd));
+//Multipils of 3 using filter
+const multipleof3 = (num) => (num % 3 == 0 )
+console.log("Multiples of 3 using Filter: " + numbers.filter(multipleof3));
+//Reduce
+const sum = (accumulator, currentValue) => accumulator + currentValue;
+console.log("Sum of array elements using Reduce: " + numbers.reduce(sum));
+//sum of even triple numbers using map,reduce and filter
+const array = [1, 2, 3, 4, 5, 6];
+const func=array
+           .filter(num=> num%2==0)
+           .map(num=> num*3)
+           .reduce((acc,curr)=> acc+curr);
+console.log("Sum of even triple numbers using map,reduce and filter: " + func);
+//De construct the array
+const myArray = [1, 2, 3, 4, 5];
+const [first, second, third, ...rest] = myArray;
+console.log("Rest of Element: " + rest);
+//spread operator
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const combined = [...arr1, ...arr2];
+console.log("Combined Array: " + combined);
+//spread operator in objects
+const obj11 = { a: 1, b: 2 };
+const obj22 = { c: 3, b: 4 };
+const combinedObj = { ...obj11, ...obj22 };
+console.log("Combined Object: " + JSON.stringify(combinedObj));
