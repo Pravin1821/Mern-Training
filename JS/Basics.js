@@ -81,3 +81,38 @@ const obj11 = { a: 1, b: 2 };
 const obj22 = { c: 3, b: 4 };
 const combinedObj = { ...obj11, ...obj22 };
 console.log("Combined Object: " + JSON.stringify(combinedObj));
+//Promises
+console.log("Promise Example:");
+let promise=new Promise((resolve,reject)=>{
+    const success=true;
+    setTimeout(()=>{
+    if(success)
+        resolve("Resolved!");
+    else
+        reject("Rejected!");
+    }),2000;
+})
+promise.then((result)=>{console.log(result)})
+       .catch(reject=>{console.log(reject)})
+       .finally(()=>{console.log("Promise is settled")});
+//fetch example
+fetch('https://jsonplaceholder.typicode.com/posts')
+      .then(response => response.json())
+      .then(data => data.map(user=>console.log(user.id)))
+console.log("End of Promise Example");
+//Async Await
+async function fetchData() {
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.log(error);
+    }
+}
+fetchData();
+//String Literals
+let name1="Pravin";
+let age=19;
+let message=`My name is ${name1} and Im ${age} years old.`;
+console.log(message);

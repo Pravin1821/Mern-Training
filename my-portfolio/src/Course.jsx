@@ -1,6 +1,7 @@
 import Image from './assets/react.svg';
 
 function Course(props){
+
     return(
         <>
         <div className="card">
@@ -10,6 +11,7 @@ function Course(props){
         </div>
         </>
     )
+
 }
 
 Course.defaultProps={
