@@ -16,9 +16,9 @@ function Courselist(){
             name: "JS Full Course", 
             rate: "Rating: 4.8"
         },
-        {
+        { 
             id:4,
-            name: "Java Full Course", 
+            name: "Java Full Course",
             rate: "Rating: 4.9"
         }
     ];

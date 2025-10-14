@@ -4,11 +4,11 @@ function Course(props){
 
     return(
         <>
-        <div className="card">
+        {props.name && <div className="card">
             <img src={Image} alt="React-image" />
             <h3>{props.name}</h3>
             <p>{props.rate}</p>
-        </div>
+        </div>}
         </>
     )
 
