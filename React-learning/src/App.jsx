@@ -4,7 +4,9 @@ import Prop from './Components/Prop'
 import { BrowserRouter as Router, Route, Routes, BrowserRouter , Link} from 'react-router-dom'
 import Home from './Pages/Home'
 import About from './Pages/About'
+import Contact from './Pages/Contact'
 import NavBar from './Components/NavBar'
+
 
 function App() {
   useEffect(() => {
@@ -17,7 +19,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
-      </Routes>
+        <Route path='/contact' element={<Contact />} />
+      </Routes>     
     </BrowserRouter>
   )
 }

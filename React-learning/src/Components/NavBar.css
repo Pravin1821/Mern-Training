@@ -1,0 +1,31 @@
+link {
+  color: #333;
+  text-decoration: none;
+}
+link:hover {
+  text-decoration: underline;
+}
+link.active {
+  font-weight: bold;
+}
+.navbr {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.navbr a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #333;
+}
+.navbr a:hover {
+  text-decoration: underline;
+}
+.navbr a.active {
+  font-weight: bold;
+}
+.navbr a {
+  font-size: 1.2rem;
+}
+

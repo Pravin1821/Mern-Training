@@ -1,4 +1,6 @@
 import React from 'react'
+import State from '../Hooks/State'
+import Like from '../Hooks/Like'
 
 function Home() {
   return (
@@ -7,7 +9,8 @@ function Home() {
       <p>This is the home page content.</p>
       <p>Additional information can go here.</p>
       <p>Feel free to explore the website.</p>
-      
+      <State />
+      <Like />
     </div>
   )
 }
