@@ -1,14 +1,37 @@
 import React from 'react'
 import './NavBar.css'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 function NavBar() {
   return (
-    <div className='navbr'>
-      <Link to="/">Home</Link> | {" "}
-      <Link to="/about">About</Link> | {" "}
-      <Link to="/contact">Contact</Link>
-    </div>
+    <header className="nav-wrapper" role="banner">
+      <nav className="nav" role="navigation" aria-label="Main navigation">
+        <div className="nav__brand">
+          <NavLink to="/" className="nav__logo" aria-label="Home">
+            <span className="nav__logo-mark">PR</span>
+            <span className="nav__logo-text">Pravin</span>
+          </NavLink>
+        </div>
+
+        <ul className="nav__list">
+          <li className="nav__item">
+            <NavLink to="/" end className={({ isActive }) => isActive ? 'nav__link active' : 'nav__link'}>
+              Home
+            </NavLink>
+          </li>
+          <li className="nav__item">
+            <NavLink to="/about" className={({ isActive }) => isActive ? 'nav__link active' : 'nav__link'}>
+              About
+            </NavLink>
+          </li>
+          <li className="nav__item">
+            <NavLink to="/contact" className={({ isActive }) => isActive ? 'nav__link active' : 'nav__link'}>
+              Contact
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+    </header>
   )
 }
 

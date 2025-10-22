@@ -30,6 +30,11 @@ body {
   min-height: 100vh;
 }
 
+/* Ensure content sits below the fixed navbar. Uses the variable defined in NavBar.css if present. */
+main, #root, .app-root {
+  padding-top: calc(var(--navbar-height, 72px) + 12px);
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;

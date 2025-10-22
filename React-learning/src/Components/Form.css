@@ -1,35 +1,118 @@
 .form {
   display: flex;
+  justify-content: center;
+  padding: 24px;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 560px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(10, 20, 40, 0.08);
+  padding: 24px;
+  box-sizing: border-box;
+  border: 1px solid rgba(15, 50, 80, 0.04);
+}
+
+.form-title {
+  margin: 0 0 6px 0;
+  font-size: 1.25rem;
+  color: #0f2f4a;
+}
+
+.form-sub {
+  margin: 0 0 18px 0;
+  color: #4b6b83;
+  font-size: 0.95rem;
+}
+
+.field {
+  display: flex;
   flex-direction: column;
-  max-width: 400px;
-  margin: 0 auto;
+  margin-bottom: 14px;
 }
 
-.form label {
+.field label {
   margin-bottom: 8px;
+  color: #24485f;
+  font-weight: 600;
+  font-size: 0.92rem;
 }
 
-.form input,
-.form textarea {
-  padding: 8px;
-  margin-bottom: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.field input,
+.field textarea {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #d7e2ea;
+  background: #fff;
+  outline: none;
+  transition: box-shadow 160ms ease, border-color 160ms ease, transform 120ms ease;
+  font-size: 0.98rem;
+  color: #0f2f4a;
 }
 
-.form input[type="submit"] {
-  background-color: #007bff;
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #9fb0bf;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: #6aa4ff;
+  box-shadow: 0 6px 18px rgba(106, 164, 255, 0.12);
+  transform: translateY(-1px);
+}
+
+.error {
+  color: #c84b4b;
+  font-size: 0.875rem;
+  margin-top: 8px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #0b76ff 0%, #0066d6 100%);
   color: white;
   border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
   cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 8px 18px rgba(11, 118, 255, 0.14);
+  transition: transform 120ms ease, box-shadow 120ms ease;
 }
 
-.form input[type="submit"]:hover {
-  background-color: #0056b3;
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(11, 118, 255, 0.16);
 }
-.form .error {
-  color: red;
-  font-size: 0.875rem;
-  margin-top: -12px;
-  margin-bottom: 16px;
+
+.success {
+  color: #1f7a3a;
+  background: rgba(31, 122, 58, 0.08);
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+@media (max-width: 520px) {
+  .form-card {
+    padding: 18px;
+    border-radius: 10px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
 }
