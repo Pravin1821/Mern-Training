@@ -6,6 +6,8 @@ import Home from './Pages/Home'
 import About from './Pages/About'
 import Contact from './Pages/Contact'
 import NavBar from './Components/NavBar'
+import Effect from './Hooks/effect'
+
 
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/Effect' element={<Effect />} />
       </Routes>     
     </BrowserRouter>
   )

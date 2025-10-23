@@ -8,7 +8,7 @@ function NavBar() {
       <nav className="nav" role="navigation" aria-label="Main navigation">
         <div className="nav__brand">
           <NavLink to="/" className="nav__logo" aria-label="Home">
-            <span className="nav__logo-mark">PR</span>
+            <span className="nav__logo-mark">SK</span>
             <span className="nav__logo-text">Pravin</span>
           </NavLink>
         </div>
@@ -27,6 +27,11 @@ function NavBar() {
           <li className="nav__item">
             <NavLink to="/contact" className={({ isActive }) => isActive ? 'nav__link active' : 'nav__link'}>
               Contact
+            </NavLink>
+          </li>
+          <li className="nav__item">
+            <NavLink to="/Effect" className={({ isActive }) => isActive ? 'nav__link active' : 'nav__link'}>
+              Effect
             </NavLink>
           </li>
         </ul>

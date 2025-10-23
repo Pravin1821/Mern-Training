@@ -1,6 +1,7 @@
 import React from 'react'
 import State from '../Hooks/State'
 import Like from '../Hooks/Like'
+import Effect from '../Hooks/effect'
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       <p>Feel free to explore the website.</p>
       <State />
       <Like />
+      {/* <Effect /> */}
     </div>
   )
 }
